@@ -45,9 +45,6 @@ const Home = () => {
           setSubmitting(false);
 
           toast.success("Setting saved successfully");
-
-          resetForm();
-          setSelectedLogo(null);
         } else {
           setSubmitting(false);
           return toast.error(
