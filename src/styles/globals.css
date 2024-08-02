@@ -1,0 +1,334 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+:root,
+.light,
+.light-theme {
+  --green-1: #fbfefc;
+  --green-2: #f4fbf7;
+  --green-3: #e5f7ec;
+  --green-4: #d5f1e0;
+  --green-5: #c2e9d2;
+  --green-6: #acdec1;
+  --green-7: #8ccfa9;
+  --green-8: #5cba89;
+  --green-9: #118e5c;
+  --green-10: #00824c;
+  --green-11: #008150;
+  --green-12: #1c3b2b;
+
+  --green-a1: #00c04004;
+  --green-a2: #00a3460b;
+  --green-a3: #00b1451a;
+  --green-a4: #00aa432a;
+  --green-a5: #00a4433d;
+  --green-a6: #009a4153;
+  --green-a7: #00954173;
+  --green-a8: #009347a3;
+  --green-a9: #008650ee;
+  --green-a10: #00824c;
+  --green-a11: #008150;
+  --green-a12: #002311e3;
+
+  --green-contrast: #fff;
+  --green-surface: #f1faf5cc;
+  --green-indicator: #118e5c;
+  --green-track: #118e5c;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+
+    :root,
+    .light,
+    .light-theme {
+      --green-1: oklch(99.4% 0.004 159.2);
+      --green-2: oklch(98.2% 0.01 159.2);
+      --green-3: oklch(95.9% 0.024 159.2);
+      --green-4: oklch(93.3% 0.038 159.2);
+      --green-5: oklch(90.1% 0.051 159.2);
+      --green-6: oklch(85.8% 0.066 159.2);
+      --green-7: oklch(79.9% 0.086 159.2);
+      --green-8: oklch(71.7% 0.115 159.2);
+      --green-9: oklch(57.2% 0.127 159.2);
+      --green-10: oklch(52.7% 0.139 159.2);
+      --green-11: oklch(52.9% 0.127 159.2);
+      --green-12: oklch(32.3% 0.048 159.2);
+
+      --green-a1: color(display-p3 0.024 0.675 0.024 / 0.012);
+      --green-a2: color(display-p3 0.024 0.612 0.22 / 0.04);
+      --green-a3: color(display-p3 0.012 0.616 0.227 / 0.091);
+      --green-a4: color(display-p3 0.008 0.6 0.196 / 0.146);
+      --green-a5: color(display-p3 0.004 0.569 0.192 / 0.208);
+      --green-a6: color(display-p3 0.004 0.537 0.18 / 0.287);
+      --green-a7: color(display-p3 0.004 0.502 0.173 / 0.393);
+      --green-a8: color(display-p3 0 0.49 0.18 / 0.546);
+      --green-a9: color(display-p3 0 0.396 0.165 / 0.746);
+      --green-a10: color(display-p3 0 0.361 0.125 / 0.781);
+      --green-a11: color(display-p3 0 0.357 0.141 / 0.781);
+      --green-a12: color(display-p3 0 0.102 0.035 / 0.859);
+
+      --green-contrast: #fff;
+      --green-surface: color(display-p3 0.953 0.98 0.961 / 0.8);
+      --green-indicator: oklch(57.2% 0.127 159.2);
+      --green-track: oklch(57.2% 0.127 159.2);
+    }
+  }
+}
+
+.dark,
+.dark-theme {
+  --green-1: #0a130e;
+  --green-2: #101c15;
+  --green-3: #0a2e1d;
+  --green-4: #003e24;
+  --green-5: #004c2d;
+  --green-6: #005b37;
+  --green-7: #006c43;
+  --green-8: #008150;
+  --green-9: #118e5c;
+  --green-10: #00804f;
+  --green-11: #66d09a;
+  --green-12: #9df6c5;
+
+  --green-a1: #00bb0003;
+  --green-a2: #00fb670c;
+  --green-a3: #00f97120;
+  --green-a4: #00fc7431;
+  --green-a5: #00fd8140;
+  --green-a6: #00fd8a50;
+  --green-a7: #00fe9462;
+  --green-a8: #00ff9778;
+  --green-a9: #11ffa086;
+  --green-a10: #00ff9677;
+  --green-a11: #7bffbccd;
+  --green-a12: #a2fecbf6;
+
+  --green-contrast: #fff;
+  --green-surface: #10271980;
+  --green-indicator: #118e5c;
+  --green-track: #118e5c;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+
+    .dark,
+    .dark-theme {
+      --green-1: oklch(17.8% 0.017 159.2);
+      --green-2: oklch(21.1% 0.022 159.2);
+      --green-3: oklch(27.1% 0.052 159.2);
+      --green-4: oklch(31.8% 0.077 159.2);
+      --green-5: oklch(36.4% 0.088 159.2);
+      --green-6: oklch(41.3% 0.097 159.2);
+      --green-7: oklch(46.7% 0.109 159.2);
+      --green-8: oklch(52.8% 0.127 159.2);
+      --green-9: oklch(57.2% 0.127 159.2);
+      --green-10: oklch(52.7% 0.127 159.2);
+      --green-11: oklch(78% 0.127 159.2);
+      --green-12: oklch(90.5% 0.11 159.2);
+
+      --green-a1: color(display-p3 0 0.941 0 / 0.009);
+      --green-a2: color(display-p3 0.235 0.988 0.404 / 0.047);
+      --green-a3: color(display-p3 0.2 1 0.502 / 0.118);
+      --green-a4: color(display-p3 0.196 1 0.514 / 0.185);
+      --green-a5: color(display-p3 0.278 1 0.569 / 0.244);
+      --green-a6: color(display-p3 0.325 1 0.592 / 0.307);
+      --green-a7: color(display-p3 0.361 1 0.624 / 0.374);
+      --green-a8: color(display-p3 0.4 1 0.635 / 0.463);
+      --green-a9: color(display-p3 0.431 1 0.667 / 0.517);
+      --green-a10: color(display-p3 0.392 1 0.635 / 0.458);
+      --green-a11: color(display-p3 0.62 1 0.765 / 0.795);
+      --green-a12: color(display-p3 0.725 1 0.824 / 0.954);
+
+      --green-contrast: #fff;
+      --green-surface: color(display-p3 0.071 0.141 0.094 / 0.5);
+      --green-indicator: oklch(57.2% 0.127 159.2);
+      --green-track: oklch(57.2% 0.127 159.2);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+button,
+a {
+  cursor: pointer !important;
+}
+
+@layer utilities {
+
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.btn-ghost {
+  @apply text-sm text-center font-medium hover:bg-transparent;
+}
+
+.img-fluid {
+  @apply max-w-full h-auto;
+}
+
+.hstack {
+  @apply flex items-center self-stretch;
+}
+
+.no-focus {
+  @apply focus:border-0 focus:outline-none focus:shadow-none
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 62px;
+  background: #C4C4C4;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 62px;
+  background: #ECECEC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777777;
+}
+
+/* scrol bar ends */
+
+/* hide scroll bar */
+.scrollbar {
+  -ms-overflow-style: none;
+  /* Make scroll bar invisible */
+  scrollbar-width: none;
+  /* Make scroll bar invisible */
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Make scroll bar invisible */
+}
