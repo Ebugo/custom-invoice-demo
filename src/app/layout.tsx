@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${inter.className} antialiased overflow-x-hidden m-0 p-0 scroll-smooth bg-[var(--gray-2)]`}
+      >
+        {children}
+        <Toaster
+          position="top-right"
+          expand={false}
+          closeButton
+          duration={5000}
+          toastOptions={{
+            classNames: {
+              toast: "!rounded-sm",
+              title: "!text-sm !font-normal",
+              description: "!text-xs !pt-1",
+              error: "!text-red-600 !bg-red-200",
+              success: "!text-green-600 !bg-green-200",
+              warning: "!text-amber-600 !bg-amber-200",
+              info: "!text-[var(--green-11)] !bg-[var(--green-6)]",
+            },
+          }}
+        />
+      </body>
     </html>
   );
 }
