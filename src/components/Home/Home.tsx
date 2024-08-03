@@ -153,7 +153,7 @@ const Home = () => {
     axios
       .get(
         `https://www.googleapis.com/webfonts/v1/webfonts?key=${
-          process.env.NEXT_PUBLIC_FONT_KEY || ""
+          process.env.NEXT_PUBLIC_FT || ""
         }&sort=popularity`
       )
       .then((response) => {
