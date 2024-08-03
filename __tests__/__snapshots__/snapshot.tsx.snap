@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <main
+    class="grid grid-cols-1 md:grid-cols-5 gap-5 lg:gap-10 w-full min-h-screen"
+  >
+    <section
+      class="bg-[var(--green-a1)] col-span-1 md:col-span-2 p-5 lg:p-10 lg:py-5 md:h-screen overflow-y-auto no-scrollbar"
+    >
+      <form
+        autocomplete="off"
+        novalidate=""
+      >
+        <div
+          class="h-full"
+        >
+          <div
+            class="flex flex-col gap-3 md:gap-8"
+          >
+            <div
+              class="flex flex-col gap-3"
+            >
+              <h3
+                class="font-bold text-2xl"
+              >
+                Business Settings
+              </h3>
+              <p
+                class="text-gray-600"
+              >
+                Customize your business
+              </p>
+            </div>
+            <div>
+              <div
+                class="flex flex-col gap-5"
+              >
+                <div
+                  class="h-[213px] border border-[var(--green-1)] rounded-lg flex flex-col  w-full cursor-pointer"
+                  role="presentation"
+                  tabindex="0"
+                >
+                  <input
+                    accept="image/*"
+                    multiple=""
+                    style="display: none;"
+                    tabindex="-1"
+                    type="file"
+                  />
+                  <div
+                    class="flex flex-col items-center justify-center text-center py-5 my-auto h-[213px]"
+                  >
+                    <img
+                      alt="choose file"
+                      class="rounded-lg img-fluid !w-10 !h-10"
+                      data-nimg="1"
+                      decoding="async"
+                      height="0"
+                      loading="lazy"
+                      src="/svg/cloud.svg"
+                      style="color: transparent;"
+                      width="0"
+                    />
+                    <div
+                      class="text-[var(--green-11)] md:w-[75%]"
+                    >
+                      <p
+                        class="text-[var(--green-11)] text-bold"
+                      >
+                        Click to upload
+                      </p>
+                       or drag and drop PNG, or JPG
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-col space-y-6 border border-[var(--green-3)] rounded-lg p-5 bg-[var(--green-1)]"
+            >
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                  for="name"
+                >
+                  Business Name
+                   
+                  <span />
+                </label>
+                <div
+                  class="border border-gray-500 rounded-sm "
+                >
+                  <input
+                    class="shadow-none ring-0 px-2 h-[40px] rounded-sm w-full"
+                    id="name"
+                    name="name"
+                    placeholder="Write something"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                  for="details"
+                >
+                  Bank Details
+                   
+                  <span />
+                </label>
+                <div
+                  class="border border-gray-500 rounded-sm "
+                >
+                  <input
+                    class="shadow-none ring-0 px-2 h-[40px] rounded-sm w-full"
+                    id="details"
+                    name="details"
+                    placeholder="Write something"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                  for="terms"
+                >
+                  Terms
+                   
+                  <span />
+                </label>
+                <div
+                  class="border border-gray-500 rounded-sm "
+                >
+                  <input
+                    class="shadow-none ring-0 px-2 h-[40px] rounded-sm w-full"
+                    id="terms"
+                    name="terms"
+                    placeholder="Write something"
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                >
+                  Choose Font Color
+                   
+                  <span />
+                </label>
+                <div
+                  class="react-colorful"
+                >
+                  <div
+                    class="react-colorful__saturation"
+                    style="background-color: rgb(255, 0, 0);"
+                  >
+                    <div
+                      aria-label="Color"
+                      aria-valuetext="Saturation 0%, Brightness 0%"
+                      class="react-colorful__interactive"
+                      role="slider"
+                      tabindex="0"
+                    >
+                      <div
+                        class="react-colorful__pointer react-colorful__saturation-pointer"
+                        style="top: 100%; left: 0%;"
+                      >
+                        <div
+                          class="react-colorful__pointer-fill"
+                          style="background-color: rgb(0, 0, 0);"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="react-colorful__hue react-colorful__last-control"
+                  >
+                    <div
+                      aria-label="Hue"
+                      aria-valuemax="360"
+                      aria-valuemin="0"
+                      aria-valuenow="0"
+                      class="react-colorful__interactive"
+                      role="slider"
+                      tabindex="0"
+                    >
+                      <div
+                        class="react-colorful__pointer react-colorful__hue-pointer"
+                        style="top: 50%; left: 0%;"
+                      >
+                        <div
+                          class="react-colorful__pointer-fill"
+                          style="background-color: rgb(255, 0, 0);"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                >
+                  Choose Background Color
+                   
+                  <span />
+                </label>
+                <div
+                  class="react-colorful"
+                >
+                  <div
+                    class="react-colorful__saturation"
+                    style="background-color: rgb(255, 0, 0);"
+                  >
+                    <div
+                      aria-label="Color"
+                      aria-valuetext="Saturation 0%, Brightness NaN%"
+                      class="react-colorful__interactive"
+                      role="slider"
+                      tabindex="0"
+                    >
+                      <div
+                        class="react-colorful__pointer react-colorful__saturation-pointer"
+                        style="left: 0%;"
+                      >
+                        <div
+                          class="react-colorful__pointer-fill"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="react-colorful__hue react-colorful__last-control"
+                  >
+                    <div
+                      aria-label="Hue"
+                      aria-valuemax="360"
+                      aria-valuemin="0"
+                      aria-valuenow="0"
+                      class="react-colorful__interactive"
+                      role="slider"
+                      tabindex="0"
+                    >
+                      <div
+                        class="react-colorful__pointer react-colorful__hue-pointer"
+                        style="top: 50%; left: 0%;"
+                      >
+                        <div
+                          class="react-colorful__pointer-fill"
+                          style="background-color: rgb(255, 0, 0);"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                  for="font"
+                >
+                  Choose font
+                   
+                  <span />
+                </label>
+                <select
+                  class="border border-gray-500 rounded-sm h-[40px] px-1 w-full "
+                  id="font"
+                  name="font"
+                />
+              </div>
+              <div
+                class="flex flex-col space-y-2"
+              >
+                <label
+                  class="text-sm font-medium text-[var(--green-12)]"
+                  for="template"
+                >
+                  Select template
+                   
+                  <span />
+                </label>
+                <select
+                  class="border border-gray-500 rounded-sm h-[40px] px-1 w-full "
+                  id="template"
+                  name="template"
+                />
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-5"
+            >
+              <button
+                class="rounded-lg bg-gray-200 text-sm min-w-[70px] min-h-8 font-medium flex items-center justify-center px-3"
+                type="button"
+              >
+                Cancel
+              </button>
+              <button
+                class="rounded-lg text-sm bg-[var(--green-9)] text-white px-3 min-w-[70px] min-h-8 font-medium flex items-center justify-center text-[var(--green-1)]"
+                type="submit"
+              >
+                Sav
+                e
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section
+      class="col-span-1 md:col-span-3 flex flex-col gap-10 p-5 lg:p-10 lg:py-5"
+    >
+      <h2
+        class="font-bold text-2xl"
+      >
+        Preview
+      </h2>
+      <iframe
+        class="h-full w-full min-h-[80vh] max-w-[100vw]"
+        srcdoc=""
+      />
+    </section>
+  </main>
+</div>
+`;

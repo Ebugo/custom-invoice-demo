@@ -9,7 +9,7 @@ import { IOptionsType } from "@/types";
  * @returns {Array} the result array
  */
 export const createCustomOptions = <T extends { [key: string]: string }>(
-  arr: T[],
+  arr: T[] | any[],
   valueKey: string = "value",
   labelKey: string = "label"
 ): Array<IOptionsType> => {
@@ -23,4 +23,26 @@ export const createCustomOptions = <T extends { [key: string]: string }>(
     acc.push(value);
     return acc;
   }, []);
+};
+
+/**
+ * Debounce utility function
+ * @param func callback function
+ * @param wait wait duration in milliseconds
+ * @returns calls callback function after wait duration
+ */
+export const debounce = <T extends (...args: any[]) => void>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: ReturnType<typeof setTimeout> | null;
+
+  return function (...args: Parameters<T>) {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => {
+      func(...args);
+    }, wait);
+  };
 };

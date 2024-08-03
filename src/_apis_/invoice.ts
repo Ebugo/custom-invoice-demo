@@ -10,5 +10,7 @@ export const getInvoiceTemplatesApi = async (): Promise<
 export const postSaveInvoiceSettingApi = async (
   body: any
 ): Promise<HttpSuccessResponse<any>> => {
-  return httpService.post("/invoice/settings", { body });
+  return httpService.post("/invoice/settings", body, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
 };

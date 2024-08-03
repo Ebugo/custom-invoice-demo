@@ -1,17 +1,32 @@
-import { templates } from "@/_mock_";
 import { NextRequest, NextResponse } from "next/server";
+
+export const config = {
+  api: {
+    bodyParser: false, // Disables the default body parser
+  },
+};
 
 export async function POST(request: NextRequest) {
   try {
-    // TODO: use cookie to control this on the server side level
-    const body = await request.json();
+    const formData = await request.formData();
+    const body = Object.fromEntries(formData);
+    const file = (body.file as Blob) || null;
+
+    // Make use of data in fields and file in files
+
     return NextResponse.json({
-      data: templates,
+      data: { ...body, file: Buffer.from(await file.arrayBuffer()) },
       success: true,
       message: "Settings saved successfully",
     });
   } catch (error) {
-    console.error({ error });
-    return NextResponse.json({ data: error });
+    return NextResponse.json(
+      {
+        success: false,
+        message: "An error occurred",
+        error,
+      },
+      { status: 400 }
+    );
   }
 }

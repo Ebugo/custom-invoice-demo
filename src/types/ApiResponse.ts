@@ -7,7 +7,7 @@ interface HttpSuccessResponse<T> {
 }
 
 interface HttpErrorResponse extends AxiosError {
-  readonly data: null;
+  readonly error: any;
   readonly message: string;
   readonly success: boolean;
 }

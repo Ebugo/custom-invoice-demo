@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 
-const FormLabel: FC<{ htmlFor: string; label: string; optional?: string }> = ({
+const FormLabel: FC<{ htmlFor?: string; label: string; optional?: string }> = ({
   htmlFor,
   label,
   optional,

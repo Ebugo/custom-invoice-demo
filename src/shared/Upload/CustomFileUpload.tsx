@@ -14,12 +14,12 @@ export default function CustomFileUpload({
   fileType = "image/*",
   selectedFile,
   initial,
-  setSelectedFile,
+  handleSelectedFile,
 }: {
   fileType?: string;
   selectedFile: File | null;
   initial?: string;
-  setSelectedFile: Dispatch<SetStateAction<File | null>>;
+  handleSelectedFile: (file: File | null) => void;
 }) {
   const itemTemplate = () => {
     return selectedFile || initial ? (
@@ -36,7 +36,7 @@ export default function CustomFileUpload({
         />
         <div className="flex items-center gap-1 absolute bottom-4 left-4 px-3 py-1 rounded-full bg-[var(--green-1)] bg-opacity-50">
           <HiMiniPhoto />
-          <p className="">Change logo</p>
+          <small className="">Change logo</small>
         </div>
       </div>
     ) : (
@@ -48,10 +48,10 @@ export default function CustomFileUpload({
           alt="choose file"
           className="rounded-lg img-fluid !w-10 !h-10"
         />
-        <p className="text-[var(--green-11)] md:w-[75%]">
+        <div className="text-[var(--green-11)] md:w-[75%]">
           <p className="text-[var(--green-11)] text-bold">Click to upload</p> or
           drag and drop PNG, or JPG
-        </p>
+        </div>
       </div>
     );
   };
@@ -62,9 +62,9 @@ export default function CustomFileUpload({
     event: DropEvent
   ) => void = useCallback(
     (acceptedFiles) => {
-      setSelectedFile(acceptedFiles[0]);
+      handleSelectedFile(acceptedFiles[0]);
     },
-    [setSelectedFile]
+    [handleSelectedFile]
   );
   const { getRootProps, getInputProps } = useDropzone({ onDrop, ...options });
 
