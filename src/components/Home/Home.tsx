@@ -93,7 +93,7 @@ const Home = () => {
       `<style>
         @font-face {
           font-family: ${selectedFont?.family || values.font};
-          src: url(${selectedFont?.menu || ""}) format('truetype');
+          src: url(${selectedFont?.files?.regular || ""}) format('truetype');
           font-weight: normal;
           font-style: normal;
         }
